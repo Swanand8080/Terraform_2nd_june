@@ -23,7 +23,7 @@ resource "aws_instance" "instance1" {
         ami = "ami-0953476d60561c955"
         instance_type = "t2.small"
         availability_zone = "us-east-1a"
-        key_name = "Swanand_Terraform_Key"
+        key_name = "Swanand_test"
         tags = {
         Name = "Amazon Instance"
 }
