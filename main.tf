@@ -19,6 +19,14 @@ resource "aws_ebs_volume" "myvol1" {
   }
 }
 
+resource "aws_ebs_volume" "myvol2" {
+  availability_zone = "us-east-1a"
+  size              = var.size
+  tags = {
+    Name = "${var.tag}-volume"
+  }
+}
+
 resource "aws_instance" "instance1" {
   ami               = var.ami
   instance_type     = var.instance_type
