@@ -37,6 +37,16 @@ resource "aws_instance" "instance1" {
   }
 }
 
+resource "aws_instance" "instance2" {
+  ami               = var.ami
+  instance_type     = var.instance_type
+  availability_zone = "us-east-1a"
+  key_name          = "Swanand_test"
+  tags = {
+    Name = "${var.tag}-instance-1"
+  }
+}
+
 resource "aws_volume_attachment" "ebs_att_1" {
   device_name = "/dev/sdh"
   volume_id   = aws_ebs_volume.myvol1.id
