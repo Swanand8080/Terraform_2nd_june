@@ -23,7 +23,7 @@ resource "aws_ebs_volume" "myvol2" {
   availability_zone = "us-east-1a"
   size              = var.size
   tags = {
-    Name = "${var.tag}-volume"
+    Name = "${var.tag}-volume-1"
   }
 }
 
@@ -33,7 +33,7 @@ resource "aws_instance" "instance1" {
   availability_zone = "us-east-1a"
   key_name          = "Swanand_test"
   tags = {
-    Name = "${var.tag}-instance"
+    Name = "${var.tag}-instance-1"
   }
 }
 
